@@ -157,9 +157,11 @@ return
 y::
 Run, Chrome.exe "https://web.whatsapp.com/"
 return
-u::Run, Notepad.exe
+u::
+Run, Chrome.exe "https://github.com/Microsoftened-Nair/Python_main"
 return
-i::
+i::Run, Notepad.exe
+return
 o::
 p::
 [::
