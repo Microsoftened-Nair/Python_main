@@ -74,10 +74,12 @@ return
 ;return
 F3::tooltip, you pressed F3 but do not get a beep.
 F4::
-F5::
-F6::
-F7::
-F8::
+
+F5::Send, !m
+F6::Send, ^k
+F7::Send, ^+k
+F8::Send, ^!z
+
 F9::
 {
 Send, root = LabelFrame(win, text=' ', font=('Segoe UI', 20, 'bold'), bd=10) {Enter}
