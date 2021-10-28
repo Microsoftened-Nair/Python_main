@@ -220,9 +220,9 @@ g::Run, pycharm64.exe
 	 Run, chrome.exe
 return
 
-j:: Send, #k
-k:: Send, ^+{Escape}
-l::
+j::Run, Chrome.exe "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox"
+k::Send, ^+{Escape}
+l::Send, #k
 `;::
 ;for the above line, (semicolon) note that the ` is necessary as an escape character -- and that the syntax highlighting might get it wrong.
 '::
@@ -255,13 +255,12 @@ sleep 50
 Send, {Enter}
 }
 return
-b::
-Run, Chrome.exe "https://ryangroup.toppr.school/student/class/?tab=day-view"
+b::Run, "D:\Meghraj\Python\Git\git-bash.exe"
+n::Run, Chrome.exe "https://ryangroup.toppr.school/student/class/?tab=day-view"
 return
-n::Run, Chrome.exe "https://www.icloud.com/"
+m::Run, Chrome.exe "https://www.icloud.com/"
 return
-m::Send, #i
-,::
+,::Send, #i
 .::
 /::tooltip, [F23]  %A_thishotKey%
 space::Send, !{Space}
