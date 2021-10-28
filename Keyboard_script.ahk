@@ -319,10 +319,9 @@ return                     ;tooltip, [F23] Lshift -to-> SC070-International
 SC071::
  if WinActive("ahk_exe mintty.exe")
  {
-	 Send, ^{Ins}
+	 Send, ^{Insert}
  }
  else
-	 Clipboard =
      Send, ^c
 return
                 ;tooltip, [F23] LCtrl -to-> SC071-Language 2
