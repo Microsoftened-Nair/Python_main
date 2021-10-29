@@ -499,6 +499,8 @@ F1::msgbox, You pressed F1 on your secondary keyboard while inside of Premiere P
 +;:: Send, {;}
 #IfWinActive
 
+-::Send, {_}
++-::Send, {-}
 
 
 

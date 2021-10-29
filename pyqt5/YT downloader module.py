@@ -1,17 +1,21 @@
-def download_video():
+from pytube import *
+import webbrowser as wb
+
+def download_video(link, clicked,path):
+
     def progress(stream=None, chunk=None, remaining=None):
         file_size = stream.filesize
         p1 = (100 * (file_size - remaining)) / file_size
 
-        for i in range(1, int(p1+1)):
-            progressbar['value'] = p1
-            l4.configure(text= 'Downloaded ' + str(round(p1,1)) + "%")
-            root.update_idletasks()
-            time.sleep(0.01)
-            if p1 == 100:
-                l4.configure(text='Done')
+        # for i in range(1, int(p1+1)):
+        #     progressbar['value'] = p1
+        #     l4.configure(text= 'Downloaded ' + str(round(p1,1)) + "%")
+        #     root.update_idletasks()
+        #     time.sleep(0.01)
+        #     if p1 == 100:
+        #         l4.configure(text='Done')
 
-    link = entry.get()
+    # link = entry.get()
     yt = YouTube(link, on_progress_callback=progress)
 
     if clicked.get() == '360p':
