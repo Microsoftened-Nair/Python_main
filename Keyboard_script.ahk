@@ -502,7 +502,13 @@ F1::msgbox, You pressed F1 on your secondary keyboard while inside of Premiere P
 -::Send, {_}
 +-::Send, {-}
 
+#IfWinActive ahk_exe mintty.exe
++-:: Send, {_}
+#IfWinActive
 
+#IfWinActive ahk_exe mintty.exe
+-:: Send, {-}
+#IfWinActive
 
 ;;If you assign them BEFORE the second keyboard, they'll overrule it. You don't want that.
 #ifwinactive ahk_exe ahk_exe Adobe Premiere Pro.exe
