@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>634</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>YT Downloader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../OneDrive/Pictures/Icons/YouTube_downloader.png</normaloff>../../../OneDrive/Pictures/Icons/YouTube_downloader.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(44, 48, 56);
+background-color: qlineargradient(spread:pad, x1:0.0696965, y1:0.915, x2:1, y2:0, stop:0 rgba(0, 93, 255, 255), stop:0.880597 rgba(26, 255, 255, 255));
+</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Heading">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>28</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: qlineargradient(spread:pad, x1:0.965, y1:0.591, x2:0.035, y2:0.6075, stop:0 rgba(0, 93, 255, 255), stop:0.880597 rgba(26, 255, 255, 255));
+
+</string>
+    </property>
+    <property name="text">
+     <string>YouTube Downloader</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Link_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Enter link:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Dir_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Enter Directory:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="L_entry">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>421</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Dir_entry">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>280</y>
+      <width>421</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vid_title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Video title: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vid_Length">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Video Length: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_size">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Filesize:</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>621</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Download_button">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>470</y>
+      <width>151</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
+color: rgb(0, 255, 247);</string>
+    </property>
+    <property name="text">
+     <string>Download</string>
+    </property>
+    <property name="icon">
+     <iconset theme="1"/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>20</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Dir_go">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>280</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
+color: rgb(0, 255, 247);</string>
+    </property>
+    <property name="text">
+     <string>Browse..</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="link_go">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>160</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
+color: rgb(0, 255, 247);</string>
+    </property>
+    <property name="text">
+     <string>GO</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Quality_box">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>470</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
