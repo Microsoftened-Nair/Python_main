@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>634</width>
-    <height>630</height>
+    <width>655</width>
+    <height>732</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -139,7 +139,7 @@ color: rgb(34, 37, 255);</string>
      <rect>
       <x>20</x>
       <y>380</y>
-      <width>191</width>
+      <width>621</width>
       <height>41</height>
      </rect>
     </property>
@@ -162,7 +162,7 @@ color: rgb(34, 37, 255);</string>
      <rect>
       <x>20</x>
       <y>340</y>
-      <width>191</width>
+      <width>631</width>
       <height>41</height>
      </rect>
     </property>
@@ -180,34 +180,11 @@ color: rgb(34, 37, 255);</string>
      <string>Video Length: </string>
     </property>
    </widget>
-   <widget class="QLabel" name="L_size">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>420</y>
-      <width>191</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Segoe UI</family>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
-    </property>
-    <property name="text">
-     <string>Filesize:</string>
-    </property>
-   </widget>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>570</y>
+      <x>10</x>
+      <y>640</y>
       <width>621</width>
       <height>23</height>
      </rect>
@@ -226,7 +203,7 @@ color: rgb(34, 37, 255);</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>470</y>
+      <y>540</y>
       <width>151</width>
       <height>61</height>
      </rect>
@@ -248,7 +225,8 @@ color: rgb(0, 255, 247);</string>
      <string>Download</string>
     </property>
     <property name="icon">
-     <iconset theme="1"/>
+     <iconset theme="1">
+      <normaloff>.</normaloff>.</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -334,7 +312,7 @@ color: rgb(0, 255, 247);</string>
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>470</y>
+      <y>540</y>
       <width>73</width>
       <height>22</height>
      </rect>
@@ -350,6 +328,29 @@ color: rgb(0, 255, 247);</string>
     </property>
     <property name="frame">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_ChName">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>631</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
+color: rgb(34, 37, 255);</string>
+    </property>
+    <property name="text">
+     <string>Channel name:</string>
     </property>
    </widget>
   </widget>

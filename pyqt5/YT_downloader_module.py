@@ -1,8 +1,7 @@
 from pytube import *
 import webbrowser as wb
 
-def download_video(link, clicked,path):
-
+def download_video(link, option,path):
     def progress(stream=None, chunk=None, remaining=None):
         file_size = stream.filesize
         p1 = (100 * (file_size - remaining)) / file_size
@@ -18,27 +17,27 @@ def download_video(link, clicked,path):
     # link = entry.get()
     yt = YouTube(link, on_progress_callback=progress)
 
-    if clicked.get() == '360p':
+    if option.get() == '360p':
         stream = yt.streams.get_by_itag(18)
         stream.download(path)
 
-    if clicked.get() == '720p':
+    if option.get() == '720p':
         stream = yt.streams.get_by_itag(22)
         stream.download(path)
 
-    if clicked.get() == 'Audio only':
+    if option.get() == 'Audio only':
         stream = yt.streams.get_by_itag(136)
         stream.download(path)
         wb.open_new_tab("https://convertio.co/mp4-mp3/")
 
-    if clicked.get() == '360p video-only':
+    if option.get() == '360p video-only':
         stream = yt.streams.get_by_itag(243)
         stream.download(path)
 
-    if clicked.get() == '720p video-only':
+    if option.get() == '720p video-only':
         stream = yt.streams.get_by_itag(247)
         stream.download(path)
 
-    if clicked.get() == '1080p video-only':
+    if option.get() == '1080p video-only':
         stream = yt.streams.get_by_itag(248)
         stream.download(path)
