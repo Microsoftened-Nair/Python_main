@@ -21,9 +21,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(44, 48, 56);
-background-color: qlineargradient(spread:pad, x1:0.0696965, y1:0.915, x2:1, y2:0, stop:0 rgba(0, 93, 255, 255), stop:0.880597 rgba(26, 255, 255, 255));
-</string>
+   <string notr="true">background-color: rgb(44, 48, 56);</string>
   </property>
   <property name="animated">
    <bool>true</bool>
@@ -47,10 +45,7 @@ background-color: qlineargradient(spread:pad, x1:0.0696965, y1:0.915, x2:1, y2:0
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: qlineargradient(spread:pad, x1:0.965, y1:0.591, x2:0.035, y2:0.6075, stop:0 rgba(0, 93, 255, 255), stop:0.880597 rgba(26, 255, 255, 255));
-
-</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>YouTube Downloader</string>
@@ -72,8 +67,7 @@ color: qlineargradient(spread:pad, x1:0.965, y1:0.591, x2:0.035, y2:0.6075, stop
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Enter link:</string>
@@ -95,8 +89,7 @@ color: rgb(34, 37, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Enter Directory:</string>
@@ -111,11 +104,16 @@ color: rgb(34, 37, 255);</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="frame">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="Dir_entry">
@@ -127,11 +125,16 @@ color: rgb(34, 37, 255);</string>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="frame">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="Vid_title">
@@ -150,8 +153,7 @@ color: rgb(34, 37, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Video title: </string>
@@ -173,8 +175,7 @@ color: rgb(34, 37, 255);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Video Length: </string>
@@ -183,7 +184,7 @@ color: rgb(34, 37, 255);</string>
    <widget class="QProgressBar" name="progressBar">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>640</y>
       <width>621</width>
       <height>23</height>
@@ -193,7 +194,7 @@ color: rgb(34, 37, 255);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="value">
      <number>0</number>
@@ -218,8 +219,7 @@ color: rgb(34, 37, 255);</string>
      <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
-color: rgb(0, 255, 247);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Download</string>
@@ -260,8 +260,7 @@ color: rgb(0, 255, 247);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
-color: rgb(0, 255, 247);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Browse..</string>
@@ -295,8 +294,7 @@ color: rgb(0, 255, 247);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154542, y1:0.193, x2:1, y2:1, stop:0 rgba(10, 62, 255, 255), stop:1 rgba(255, 255, 255, 0));
-color: rgb(0, 255, 247);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>GO</string>
@@ -323,11 +321,14 @@ color: rgb(0, 255, 247);</string>
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(34, 255, 255);</string>
+    </property>
     <property name="editable">
      <bool>false</bool>
     </property>
     <property name="frame">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="L_ChName">
@@ -346,8 +347,7 @@ color: rgb(0, 255, 247);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(255, 255, 255, 0));
-color: rgb(34, 37, 255);</string>
+     <string notr="true">color: rgb(34, 255, 255);</string>
     </property>
     <property name="text">
      <string>Channel name:</string>
