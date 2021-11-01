@@ -212,7 +212,8 @@ return
 
 
 return
-g::Run, pycharm64.exe
+
+g::Run, "C:\Users\nairm\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\JetBrains\PyCharm Community Edition 2021.2.3.lnk"
 
  #if (getKeyState("F23", "P"))
  h::
