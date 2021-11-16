@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from pytube import *
-from YT_downloader_module import *
 from tkinter import filedialog as fd
+import webbrowser as wb
 
 
 class Ui_MainWindow(object):
@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
         self.progressBar.setStyleSheet("color: rgb(34, 255, 255);")
         self.progressBar.setProperty("value", 0)
         self.progressBar.setObjectName("progressBar")
-        self.Download_button = QtWidgets.QPushButton(self.centralwidget)
+        self.Download_button = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.download_video())
         self.Download_button.setGeometry(QtCore.QRect(250, 540, 151, 61))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -95,7 +95,7 @@ class Ui_MainWindow(object):
         self.Download_button.setDefault(False)
         self.Download_button.setFlat(False)
         self.Download_button.setObjectName("Download_button")
-        self.Dir_go = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.show_info())
+        self.Dir_go = QtWidgets.QPushButton(self.centralwidget, clicked= lambda: self.getdir())
         self.Dir_go.setGeometry(QtCore.QRect(440, 280, 111, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
@@ -118,17 +118,19 @@ class Ui_MainWindow(object):
         self.link_go.setFlat(False)
         self.link_go.setObjectName("link_go")
         self.Quality_box = QtWidgets.QComboBox(self.centralwidget)
-        self.Quality_box.setGeometry(QtCore.QRect(400, 540, 73, 22))
+        self.Quality_box.setGeometry(QtCore.QRect(400, 540, 100, 35))
+        quality_list = ['720p', '360p', 'Audio only', '720p video-only', '360p video-only']
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(12)
         self.Quality_box.setFont(font)
         self.Quality_box.setStyleSheet("color: rgb(34, 255, 255);")
         self.Quality_box.setEditable(False)
+        self.Quality_box.addItems(quality_list)
         self.Quality_box.setFrame(True)
         self.Quality_box.setObjectName("Quality_box")
         self.L_ChName = QtWidgets.QLabel(self.centralwidget)
-        self.L_ChName.setGeometry(QtCore.QRect(20, 420, 631, 41))
+        self.L_ChName.setGeometry(QtCore.QRect(20, 420, 631, 42))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(16)
@@ -155,16 +157,51 @@ class Ui_MainWindow(object):
 
     def show_info(self):
         link = self.L_entry.text()
-        yt = YouTube(link)
-        self.Vid_title.setText(f'Video title: {yt.title}')
-        self.Vid_Length.setText(f'Video Length: {round(yt.length/60,2)} min')
-        ch = Channel(yt.channel_url)
-        self.L_ChName.setText(f'Channel name:{ch.channel_name}')
+        yt1 = YouTube(link)
+        self.Vid_title.setText(f'Video title: {yt1.title}')
+        self.Vid_Length.setText(f'Video Length: {round(yt1.length/60,2)} min')
+        ch = Channel(yt1.channel_url)
+        self.L_ChName.setText(f'Channel name: {ch.channel_name}')
 
     def getdir(self):
         global path
         path = fd.askdirectory()
         self.Dir_entry.setText(f'{path}')
+
+    def download_video(self):
+        def progress(stream=None, chunk=None, remaining=None):
+            file_size = stream.filesize
+            p1 = (100 * (file_size - remaining)) / file_size
+            self.progressBar.setValue(int(p1))
+
+        link = self.L_entry.text()
+        yt = YouTube(link, on_progress_callback=progress)
+
+        if self.Quality_box.currentText() == '360p':
+            stream = yt.streams.get_by_itag(18)
+            stream.download(path)
+
+        if self.Quality_box.currentText() == '720p':
+            stream = yt.streams.get_by_itag(22)
+            stream.download(path)
+
+        if self.Quality_box.currentText() == 'Audio only':
+            stream = yt.streams.get_by_itag(136)
+            stream.download(path)
+            wb.open_new_tab("https://convertio.co/mp4-mp3/")
+
+        if self.Quality_box.currentText() == '360p video-only':
+            stream = yt.streams.get_by_itag(243)
+            stream.download(path)
+
+        if self.Quality_box.currentText() == '720p video-only':
+            stream = yt.streams.get_by_itag(247)
+            stream.download(path)
+
+        if self.Quality_box.currentText() == '1080p video-only':
+            stream = yt.streams.get_by_itag(248)
+            stream.download(path)
+
 
 
 
